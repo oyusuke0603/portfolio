@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小川祐介 ポートフォリオ | PC・CAD・セキュリティシステム経験者</title>
+<meta name="description" content="小川祐介のポートフォリオサイト。CAD設計・セキュリティ設備図面作成・社内外PC管理の実務経験と、個人開発の実績を紹介します。">
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --bg-card: #ffffff;
+    --text: #1f2328;
+    --text-sub: #5a6270;
+    --accent: #2f6f4f;
+    --accent-bg: #e6f0ea;
+    --border: #e3e3e0;
+    --tag-bg: #eef1f4;
+    --tag-text: #3a4250;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181c;
+      --bg-card: #1f2226;
+      --text: #eceef0;
+      --text-sub: #a3aab5;
+      --accent: #6fbf94;
+      --accent-bg: #223229;
+      --border: #2c3036;
+      --tag-bg: #262a30;
+      --tag-text: #c7cdd6;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    line-height: 1.75;
+    padding: 0 16px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding-block: 48px 80px; }
+
+  header.hero { margin-bottom: 48px; }
+  header.hero h1 {
+    font-size: 1.9rem;
+    margin: 0 0 6px;
+    letter-spacing: 0.02em;
+  }
+  header.hero .role {
+    color: var(--accent);
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0 0 16px;
+  }
+  header.hero .lead {
+    color: var(--text-sub);
+    font-size: 0.98rem;
+    max-width: 60ch;
+  }
+
+  section { margin-bottom: 52px; }
+  section h2 {
+    font-size: 1.15rem;
+    border-left: 4px solid var(--accent);
+    padding-left: 10px;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-bottom: 16px;
+  }
+
+  .timeline-item { position: relative; padding-left: 0; }
+  .timeline-item .period {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-bg);
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-bottom: 8px;
+  }
+  .timeline-item .org {
+    font-size: 1.02rem;
+    font-weight: 700;
+    margin: 4px 0 2px;
+  }
+  .timeline-item .dept {
+    font-size: 0.88rem;
+    color: var(--text-sub);
+    margin-bottom: 10px;
+  }
+  .timeline-item ul {
+    margin: 0;
+    padding-left: 1.2em;
+    font-size: 0.92rem;
+  }
+  .timeline-item li { margin-bottom: 4px; }
+
+  .skill-group { margin-bottom: 18px; }
+  .skill-group h3 {
+    font-size: 0.88rem;
+    color: var(--text-sub);
+    font-weight: 600;
+    margin: 0 0 10px;
+  }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    font-size: 0.85rem;
+    padding: 5px 12px;
+    border-radius: 6px;
+  }
+
+  .edu-item { font-size: 0.94rem; margin-bottom: 10px; }
+  .edu-item .period { color: var(--text-sub); font-size: 0.85rem; margin-right: 8px; }
+
+  .project-list { display: flex; flex-direction: column; gap: 14px; }
+  .project {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  .project .p-title { font-weight: 700; font-size: 0.98rem; margin-bottom: 4px; }
+  .project .p-title a { color: var(--accent); text-decoration: none; }
+  .project .p-title a:hover { text-decoration: underline; }
+  .project .p-desc { color: var(--text-sub); font-size: 0.9rem; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+    font-size: 0.9rem;
+    color: var(--text-sub);
+  }
+  footer .contact-btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: var(--accent);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>小川 祐介</h1>
+    <p class="role">CAD設計・セキュリティ設備図面作成・社内外PC管理</p>
+    <p class="lead">
+      パソコン関連の実務経験20年以上。CADによる図面作成、セキュリティ設備の設計図面管理、
+      社内外のPCインフラ整備・保守まで一貫して携わってきました。
+      Excel（関数・マクロ・VBA）を中心に、業務効率化のための自主的なツール開発・情報発信も行っています。
+    </p>
+  </header>
+
+  <section>
+    <h2>健康状態・配慮事項</h2>
+    <div class="card">
+      <p style="margin:0 0 10px; font-size:0.94rem;">
+        診断名：下垂体前葉機能低下症、うつ病
+      </p>
+      <ul style="margin:0; padding-left:1.2em; font-size:0.92rem;">
+        <li>服薬管理・体調記録を徹底し、自己管理を行っています</li>
+        <li>疲労が蓄積しやすい特性があるため、時短勤務など体調に配慮した勤務形態を希望します</li>
+        <li>通院・体調管理と両立しながら、無理なく長く続けられる働き方を大切にしています</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>実務経歴</h2>
+
+    <div class="card timeline-item">
+      <span class="period">2026年9月 〜 現在</span>
+      <div class="org">株式会社全日警 名古屋支社</div>
+      <div class="dept">準社員（障害者雇用枠）</div>
+      <ul>
+        <li>社内IT環境の整備・保守業務に従事</li>
+      </ul>
+    </div>
+
+    <div class="card timeline-item">
+      <span class="period">2023年8月 〜 2025年9月</span>
+      <div class="org">株式会社全日警 名古屋支社</div>
+      <div class="dept">総務部（正社員）</div>
+      <ul>
+        <li>社内パソコンの初期設定（人事異動対応）</li>
+        <li>社内パソコンシステムの仕様変更</li>
+        <li>社外パソコンインフラの整備（モバイルルーター・セキュリティ導入）</li>
+        <li>社外パソコンシステムの仕様変更</li>
+        <li>社内・社外パソコンの保守対応</li>
+      </ul>
+    </div>
+
+    <div class="card timeline-item">
+      <span class="period">2010年9月 〜 2023年8月</span>
+      <div class="org">株式会社全日警 名古屋支社</div>
+      <div class="dept">技術課（正社員）</div>
+      <ul>
+        <li>Visioによるセキュリティレイアウト図・配線図・機器構成図の作成・修正</li>
+        <li>AutoCADによるセキュリティ設置図への記号プロット・印刷対応</li>
+        <li>Excelによる顧客情報の管理（作成・修正）</li>
+        <li>セキュリティ機器への情報登録</li>
+        <li>社内パソコン環境の仕様変更・トラブル対応・保守対応</li>
+        <li>業務多忙化に伴い、PC管理業務の専門化を目的として総務部へ異動</li>
+      </ul>
+    </div>
+
+    <div class="card timeline-item">
+      <span class="period">2010年3月 〜 7月</span>
+      <div class="org">株式会社ローソン</div>
+      <div class="dept">嘱託</div>
+      <ul>
+        <li>2次元CADによる店舗図面作成（配置図・レイアウト）</li>
+        <li>3次元CADによる店舗モデル作成</li>
+      </ul>
+    </div>
+
+    <div class="card timeline-item">
+      <span class="period">2008年5月 〜 2010年2月</span>
+      <div class="org">株式会社日本テクシード</div>
+      <div class="dept">契約社員</div>
+      <ul>
+        <li>Wordによる会議議事録の作成</li>
+        <li>研修設備消耗品の在庫発注・在庫管理などの庶務全般</li>
+      </ul>
+    </div>
+
+    <div class="card timeline-item">
+      <span class="period">2005年9月 〜 2008年4月</span>
+      <div class="org">株式会社全日警 名古屋支社</div>
+      <div class="dept">契約社員</div>
+      <ul>
+        <li>Visioによるセキュリティレイアウト図・配線図・機器構成図の作成・修正</li>
+        <li>AutoCADによるセキュリティ設置図への記号プロット</li>
+        <li>Excelによる顧客情報の管理</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>スキル</h2>
+
+    <div class="skill-group">
+      <h3>CAD・図面作成</h3>
+      <div class="tags">
+        <span class="tag">AutoCAD（2次元）</span>
+        <span class="tag">Fujitsu Personal BLD（2次元）</span>
+        <span class="tag">AutoDesk Revit（3次元）</span>
+        <span class="tag">Visio（レイアウト図・配線図）</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h3>Office・事務系</h3>
+      <div class="tags">
+        <span class="tag">Excel（上級：関数・マクロ・VBA）</span>
+        <span class="tag">Word</span>
+        <span class="tag">Access（中級）</span>
+        <span class="tag">PowerPoint</span>
+        <span class="tag">Outlook</span>
+        <span class="tag">Googleスプレッドシート（中級：関数）</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h3>PC・IT管理</h3>
+      <div class="tags">
+        <span class="tag">PC初期設定・トラブル対応</span>
+        <span class="tag">社内外インフラ整備</span>
+        <span class="tag">セキュリティ機器管理</span>
+        <span class="tag">ブラインドタッチ</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>個人での取り組み</h2>
+    <p style="color:var(--text-sub); font-size:0.92rem; margin-top:-8px;">
+      業務外でも継続的に制作・情報発信を行っています。
+    </p>
+    <div class="project-list">
+
+      <div class="project">
+        <div class="p-title"><a href="https://oyusuke0603.github.io/game-demos/" target="_blank" rel="noopener">ブラウザゲーム体験版サイト（GitHub Pages）</a></div>
+        <div class="p-desc">自主制作したブラウザゲーム32本を無料公開。サイト構築からGitHub CLIによる運用まで一人で担当。</div>
+      </div>
+
+      <div class="project">
+        <div class="p-title"><a href="https://store.line.me/stickershop/author/5546482/ja" target="_blank" rel="noopener">LINEスタンプ制作・販売</a></div>
+        <div class="p-desc">LINE Store／BASEオンラインショップにてオリジナルスタンプを企画・制作・販売。</div>
+      </div>
+
+      <div class="project">
+        <div class="p-title"><a href="https://note.com/note_suke/" target="_blank" rel="noopener">note記事執筆</a></div>
+        <div class="p-desc">情報発信・体験談記事を継続的に執筆。無料記事・有料記事の両方を運用。</div>
+      </div>
+
+      <div class="project">
+        <div class="p-title"><a href="https://x.com/oyusuke0603" target="_blank" rel="noopener">SNS自動投稿の仕組み構築</a></div>
+        <div class="p-desc">Threads・X・LinkedInへの投稿を、GitHub連携の自作キューシステムで自動化・運用。</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>AI活用の取り組み</h2>
+    <div class="card">
+      <div class="skill-group" style="margin-bottom:16px;">
+        <h3>開発環境</h3>
+        <div class="tags">
+          <span class="tag">Visual Studio Code</span>
+          <span class="tag">Claude（拡張機能）</span>
+          <span class="tag">Python</span>
+        </div>
+      </div>
+      <div class="skill-group" style="margin-bottom:0;">
+        <h3>活用事例</h3>
+        <ul style="margin:0; padding-left:1.2em; font-size:0.92rem;">
+          <li>note記事の自動生成：トレンド情報をもとに無料・有料記事を自動生成し、GitHubに下書きとして保存する仕組みを構築</li>
+          <li>LINEスタンプ制作：Google Geminiを画像生成に活用したキャラクター素材制作</li>
+          <li>Kindle電子書籍の書式・レイアウト作成</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>学歴</h2>
+    <div class="edu-item"><span class="period">2003年4月〜2004年3月</span>愛知障害者職業能力開発校　CAD科（機械科）卒業</div>
+    <div class="edu-item"><span class="period">1996年3月</span>名古屋市立第二工業高等学校　電気科　卒業</div>
+  </section>
+
+  <footer>
+    <p>ご連絡はメールにてお願いいたします。</p>
+    <a class="contact-btn" href="mailto:o.yusuke0603@gmail.com">o.yusuke0603@gmail.com</a>
+  </footer>
+
+</div>
+</body>
+</html>
