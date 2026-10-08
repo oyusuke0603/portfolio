@@ -22,6 +22,7 @@
     --cad-bg: #e0f7fa; --cad-text: #00707f;
     --office-bg: #fff3e0; --office-text: #a15c00;
     --pc-bg: #e6f9ec; --pc-text: #1c7a4a;
+    --health: #b8561c;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -40,6 +41,7 @@
       --cad-bg: #123c42; --cad-text: #7fe0ec;
       --office-bg: #3a2c17; --office-text: #ffcd82;
       --pc-bg: #143427; --pc-text: #8fe0b3;
+      --health: #f0a868;
     }
   }
   * { box-sizing: border-box; }
@@ -100,12 +102,11 @@
   }
   .toc a:hover { border-color: var(--accent); color: var(--accent); }
   .toc a.toc-health {
-    background: linear-gradient(135deg, #f57c00, #e65100);
-    border-color: transparent;
-    color: #fff;
-    box-shadow: 0 4px 14px rgba(230, 81, 0, 0.35);
+    background: var(--accent-2-bg);
+    border: 2px solid var(--health);
+    color: var(--health);
   }
-  .toc a.toc-health:hover { color: #fff; border-color: transparent; filter: brightness(1.08); }
+  .toc a.toc-health:hover { border-color: var(--health); color: var(--health); }
 
   section { margin-bottom: 52px; }
   section h2 {
