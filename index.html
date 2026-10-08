@@ -78,6 +78,29 @@
     max-width: 60ch;
   }
 
+  html { scroll-behavior: smooth; }
+  section { scroll-margin-top: 16px; }
+  .toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: -24px 0 44px;
+  }
+  .toc a {
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: var(--shadow);
+    transition: border-color .15s ease, color .15s ease;
+  }
+  .toc a:hover { border-color: var(--accent); color: var(--accent); }
+  .toc a.toc-health { background: var(--accent-2-bg); }
+
   section { margin-bottom: 52px; }
   section h2 {
     display: inline-block;
@@ -227,21 +250,142 @@
     </p>
   </header>
 
-  <section>
-    <h2>健康状態・配慮事項</h2>
-    <div class="card">
-      <p style="margin:0 0 10px; font-size:0.94rem;">
-        診断名：下垂体前葉機能低下症、うつ病
-      </p>
-      <ul style="margin:0; padding-left:1.2em; font-size:0.92rem;">
-        <li>服薬管理・体調記録を徹底し、自己管理を行っています</li>
-        <li>疲労が蓄積しやすい特性があるため、時短勤務など体調に配慮した勤務形態を希望します</li>
-        <li>通院・体調管理と両立しながら、無理なく長く続けられる働き方を大切にしています</li>
-      </ul>
+  <nav class="toc" aria-label="目次">
+    <a href="#projects">個人での取り組み</a>
+    <a href="#ai">AI活用</a>
+    <a href="#skills">スキル</a>
+    <a href="#career">実務経歴</a>
+    <a href="#edu">学歴</a>
+    <a href="#health" class="toc-health">配慮事項</a>
+  </nav>
+
+  <section id="projects">
+    <h2>個人での取り組み</h2>
+    <p style="color:var(--text-sub); font-size:0.92rem; margin-top:-8px;">
+      業務外でも継続的に制作・情報発信を行っています。
+    </p>
+    <div class="project-list">
+
+      <div class="project">
+        <div class="p-title"><a href="https://oyusuke0603.github.io/game-demos/" target="_blank" rel="noopener">ブラウザゲーム体験版サイト（GitHub Pages）</a></div>
+        <div class="p-desc">自主制作したブラウザゲーム32本を無料公開。サイト構築からGitHub CLIによる運用まで一人で担当。</div>
+        <div class="p-desc" style="margin-top:4px;">作成方法：claude.aiより、作成したいゲーム仕様をプロンプトし、HTML形式で生成、BASEショップで販売、ブラウザゲーム体験版サイト（GitHub Pages）で公開。</div>
+      </div>
+
+      <div class="project">
+        <div class="p-title"><a href="https://store.line.me/stickershop/author/5546482/ja" target="_blank" rel="noopener">LINEスタンプ制作・販売</a></div>
+        <div class="p-desc">LINE Store／BASEオンラインショップにてオリジナルスタンプを企画・制作・販売。</div>
+        <div class="p-desc" style="margin-top:4px;">作成方法：Google Geminiでキャラクター画像を生成し、透過・リサイズ・圧縮処理を行ったうえでLINE Creators Studioへ申請・公開。</div>
+      </div>
+
+      <div class="project">
+        <div class="p-title"><a href="https://note.com/note_suke/" target="_blank" rel="noopener">note記事執筆</a></div>
+        <div class="p-desc">情報発信・体験談記事を継続的に執筆。無料記事・有料記事の両方を運用。</div>
+        <div class="p-links">
+          <a class="p-link" href="https://note.com/note_suke/m/m496433670d49" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 12 12"><path d="M2 1h6l2 2v8H2zm1.5 3v1h5V4zm0 2v1h5V6zm0 2v1h3.5V8z"/></svg></span>8歳から50歳、42年の闘病記<span class="sub">マガジン</span></a>
+        </div>
+        <div class="p-desc" style="margin-top:4px;">作成方法：Claudeでトレンド情報をもとに記事を自動生成し、GitHubに下書き保存したうえでnote.comへ投稿。</div>
+      </div>
+
+      <div class="project">
+        <div class="p-title"><a href="https://x.com/oyusuke0603" target="_blank" rel="noopener">Threads／X／LinkedInの自動投稿システム構築</a></div>
+        <div class="p-desc">Threads・X・LinkedInへの投稿を、GitHub連携の自作キューシステムで自動化・運用。</div>
+        <div class="p-desc" style="margin-top:4px;">作成方法：Meta／LinkedIn Developerでアプリを登録し、GitHub Actions上でPowerShellスクリプトを定期実行。投稿キュー（queue.txt）に文章を追記するだけでThreads・X・LinkedInへ自動投稿される仕組みを構築。</div>
+      </div>
+
+      <div class="project">
+        <div class="p-title"><a href="https://www.youtube.com/@suke0603/playlists" target="_blank" rel="noopener">YouTube動画の制作・公開</a></div>
+        <div class="p-desc">自身の闘病記をもとにした朗読動画や、オリジナル紙芝居アニメを制作・公開。AI生成画像・音声合成・動画生成をPowerShellで一貫して自動化する仕組みを構築。</div>
+        <div class="p-links">
+          <a class="p-link yt" href="https://www.youtube.com/playlist?list=PLaj0RIt8sDfU" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 12 12"><path d="M3 1.5v9l7.5-4.5z"/></svg></span>闘病記 朗読<span class="sub">再生リスト</span></a>
+          <a class="p-link yt" href="https://www.youtube.com/playlist?list=PLa23O7c6A60I" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 12 12"><path d="M3 1.5v9l7.5-4.5z"/></svg></span>異世界デバッガー（全話）<span class="sub">再生リスト</span></a>
+        </div>
+        <div class="p-desc" style="margin-top:4px;">作成方法：Visual Studio CodeよりClaudeを操作し、ナレーション、画像生成（Google Gemini）、合成を実施。</div>
+      </div>
+
+      <div class="project">
+        <div class="p-title"><a href="https://oyusuke0603.github.io/lp-samples/" target="_blank" rel="noopener">LPサンプルデザイン（GitHub Pages）</a></div>
+        <div class="p-desc">美容サロン・整体院・士業・スクール・飲食店の5業種を想定した、ランディングページのデザインサンプル集を制作・公開。</div>
+        <div class="p-links">
+          <a class="p-link web" href="https://oyusuke0603.github.io/lp-samples/" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 12 12"><path d="M1 2h10v8H1zm1 2v5h8V4z"/></svg></span>LPサンプル集を見る<span class="sub">5業種</span></a>
+        </div>
+        <div class="p-desc" style="margin-top:4px;">作成方法：Claudeで業種ごとのデザインを考案し、写真素材を使わずHTML／CSS／SVGのみで1ページずつ制作。GitHub Pagesで公開。</div>
+      </div>
+
+      <div class="project">
+        <div class="p-title"><a href="https://www.amazon.co.jp/dp/B0HGKX1LWQ" target="_blank" rel="noopener">Kindle書籍（闘病記）の出版</a></div>
+        <div class="p-desc">脳腫瘍から46年間の闘病記をもとにした電子書籍をAmazon Kindle（KDP）で出版。</div>
+        <div class="p-desc" style="margin-top:4px;">作成方法：Claudeで原稿を執筆し、Google Geminiで挿絵を生成。pandocでKDP提出用データに変換して出版。</div>
+      </div>
+
+      <div class="project">
+        <div class="p-title">Amazonアソシエイト活用</div>
+        <div class="p-desc">note記事内でAmazonアソシエイトリンクを紹介し、収益化の一手段として運用。</div>
+        <div class="p-desc" style="margin-top:4px;">作成方法：Amazonアソシエイト・プログラムに登録し、自身が実際に使用している商品を記事の自然な文脈で紹介する形でリンクを組み込み。</div>
+      </div>
+
     </div>
   </section>
 
-  <section>
+  <section id="ai">
+    <h2>AI活用の取り組み</h2>
+    <div class="card">
+      <div class="skill-group" style="margin-bottom:16px;">
+        <h3>開発環境</h3>
+        <div class="tags">
+          <span class="tag">Visual Studio Code</span>
+          <span class="tag">Claude（拡張機能）</span>
+          <span class="tag">Python</span>
+        </div>
+      </div>
+      <div class="skill-group" style="margin-bottom:0;">
+        <h3>活用事例</h3>
+        <ul style="margin:0; padding-left:1.2em; font-size:0.92rem;">
+          <li>note記事の自動生成：トレンド情報をもとに無料・有料記事を自動生成し、GitHubに下書きとして保存する仕組みを構築</li>
+          <li>LINEスタンプ制作：Google Geminiを画像生成に活用したキャラクター素材制作</li>
+          <li>Kindle電子書籍の書式・レイアウト作成</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>スキル</h2>
+
+    <div class="skill-group">
+      <h3>CAD・図面作成</h3>
+      <div class="tags tags-cad">
+        <span class="tag">AutoCAD（2次元）</span>
+        <span class="tag">Fujitsu Personal BLD（2次元）</span>
+        <span class="tag">AutoDesk Revit（3次元）</span>
+        <span class="tag">Visio（レイアウト図・配線図）</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h3>Office・事務系</h3>
+      <div class="tags tags-office">
+        <span class="tag">Excel（上級：関数・マクロ・VBA）</span>
+        <span class="tag">Word（初級）</span>
+        <span class="tag">Access（中級）</span>
+        <span class="tag">PowerPoint（初級）</span>
+        <span class="tag">Outlook（初級）</span>
+        <span class="tag">Googleスプレッドシート（中級：関数）</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h3>PC・IT管理</h3>
+      <div class="tags tags-pc">
+        <span class="tag">PC初期設定・トラブル対応</span>
+        <span class="tag">社内外インフラ整備</span>
+        <span class="tag">セキュリティ機器管理</span>
+        <span class="tag">ブラインドタッチ</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="career">
     <h2>実務経歴</h2>
 
     <div class="card timeline-item">
@@ -312,136 +456,24 @@
     </div>
   </section>
 
-  <section>
-    <h2>スキル</h2>
-
-    <div class="skill-group">
-      <h3>CAD・図面作成</h3>
-      <div class="tags tags-cad">
-        <span class="tag">AutoCAD（2次元）</span>
-        <span class="tag">Fujitsu Personal BLD（2次元）</span>
-        <span class="tag">AutoDesk Revit（3次元）</span>
-        <span class="tag">Visio（レイアウト図・配線図）</span>
-      </div>
-    </div>
-
-    <div class="skill-group">
-      <h3>Office・事務系</h3>
-      <div class="tags tags-office">
-        <span class="tag">Excel（上級：関数・マクロ・VBA）</span>
-        <span class="tag">Word（初級）</span>
-        <span class="tag">Access（中級）</span>
-        <span class="tag">PowerPoint（初級）</span>
-        <span class="tag">Outlook（初級）</span>
-        <span class="tag">Googleスプレッドシート（中級：関数）</span>
-      </div>
-    </div>
-
-    <div class="skill-group">
-      <h3>PC・IT管理</h3>
-      <div class="tags tags-pc">
-        <span class="tag">PC初期設定・トラブル対応</span>
-        <span class="tag">社内外インフラ整備</span>
-        <span class="tag">セキュリティ機器管理</span>
-        <span class="tag">ブラインドタッチ</span>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>個人での取り組み</h2>
-    <p style="color:var(--text-sub); font-size:0.92rem; margin-top:-8px;">
-      業務外でも継続的に制作・情報発信を行っています。
-    </p>
-    <div class="project-list">
-
-      <div class="project">
-        <div class="p-title"><a href="https://oyusuke0603.github.io/game-demos/" target="_blank" rel="noopener">ブラウザゲーム体験版サイト（GitHub Pages）</a></div>
-        <div class="p-desc">自主制作したブラウザゲーム32本を無料公開。サイト構築からGitHub CLIによる運用まで一人で担当。</div>
-        <div class="p-desc" style="margin-top:4px;">作成方法：claude.aiより、作成したいゲーム仕様をプロンプトし、HTML形式で生成、BASEショップで販売、ブラウザゲーム体験版サイト（GitHub Pages）で公開。</div>
-      </div>
-
-      <div class="project">
-        <div class="p-title"><a href="https://store.line.me/stickershop/author/5546482/ja" target="_blank" rel="noopener">LINEスタンプ制作・販売</a></div>
-        <div class="p-desc">LINE Store／BASEオンラインショップにてオリジナルスタンプを企画・制作・販売。</div>
-        <div class="p-desc" style="margin-top:4px;">作成方法：Google Geminiでキャラクター画像を生成し、透過・リサイズ・圧縮処理を行ったうえでLINE Creators Studioへ申請・公開。</div>
-      </div>
-
-      <div class="project">
-        <div class="p-title"><a href="https://note.com/note_suke/" target="_blank" rel="noopener">note記事執筆</a></div>
-        <div class="p-desc">情報発信・体験談記事を継続的に執筆。無料記事・有料記事の両方を運用。</div>
-        <div class="p-links">
-          <a class="p-link" href="https://note.com/note_suke/m/m496433670d49" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 12 12"><path d="M2 1h6l2 2v8H2zm1.5 3v1h5V4zm0 2v1h5V6zm0 2v1h3.5V8z"/></svg></span>8歳から50歳、42年の闘病記<span class="sub">マガジン</span></a>
-        </div>
-        <div class="p-desc" style="margin-top:4px;">作成方法：Claudeでトレンド情報をもとに記事を自動生成し、GitHubに下書き保存したうえでnote.comへ投稿。</div>
-      </div>
-
-      <div class="project">
-        <div class="p-title"><a href="https://x.com/oyusuke0603" target="_blank" rel="noopener">Threads／X／LinkedInの自動投稿システム構築</a></div>
-        <div class="p-desc">Threads・X・LinkedInへの投稿を、GitHub連携の自作キューシステムで自動化・運用。</div>
-        <div class="p-desc" style="margin-top:4px;">作成方法：Meta／LinkedIn Developerでアプリを登録し、GitHub Actions上でPowerShellスクリプトを定期実行。投稿キュー（queue.txt）に文章を追記するだけでThreads・X・LinkedInへ自動投稿される仕組みを構築。</div>
-      </div>
-
-      <div class="project">
-        <div class="p-title"><a href="https://www.youtube.com/@suke0603/playlists" target="_blank" rel="noopener">YouTube動画の制作・公開</a></div>
-        <div class="p-desc">自身の闘病記をもとにした朗読動画や、オリジナル紙芝居アニメを制作・公開。AI生成画像・音声合成・動画生成をPowerShellで一貫して自動化する仕組みを構築。</div>
-        <div class="p-links">
-          <a class="p-link yt" href="https://www.youtube.com/playlist?list=PLaj0RIt8sDfU" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 12 12"><path d="M3 1.5v9l7.5-4.5z"/></svg></span>闘病記 朗読<span class="sub">再生リスト</span></a>
-          <a class="p-link yt" href="https://www.youtube.com/playlist?list=PLa23O7c6A60I" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 12 12"><path d="M3 1.5v9l7.5-4.5z"/></svg></span>異世界デバッガー（全話）<span class="sub">再生リスト</span></a>
-        </div>
-        <div class="p-desc" style="margin-top:4px;">作成方法：Visual Studio CodeよりClaudeを操作し、ナレーション、画像生成（Google Gemini）、合成を実施。</div>
-      </div>
-
-      <div class="project">
-        <div class="p-title"><a href="https://oyusuke0603.github.io/lp-samples/" target="_blank" rel="noopener">LPサンプルデザイン（GitHub Pages）</a></div>
-        <div class="p-desc">美容サロン・整体院・士業・スクール・飲食店の5業種を想定した、ランディングページのデザインサンプル集を制作・公開。</div>
-        <div class="p-links">
-          <a class="p-link web" href="https://oyusuke0603.github.io/lp-samples/" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 12 12"><path d="M1 2h10v8H1zm1 2v5h8V4z"/></svg></span>LPサンプル集を見る<span class="sub">5業種</span></a>
-        </div>
-        <div class="p-desc" style="margin-top:4px;">作成方法：Claudeで業種ごとのデザインを考案し、写真素材を使わずHTML／CSS／SVGのみで1ページずつ制作。GitHub Pagesで公開。</div>
-      </div>
-
-      <div class="project">
-        <div class="p-title"><a href="https://www.amazon.co.jp/dp/B0HGKX1LWQ" target="_blank" rel="noopener">Kindle書籍（闘病記）の出版</a></div>
-        <div class="p-desc">脳腫瘍から46年間の闘病記をもとにした電子書籍をAmazon Kindle（KDP）で出版。</div>
-        <div class="p-desc" style="margin-top:4px;">作成方法：Claudeで原稿を執筆し、Google Geminiで挿絵を生成。pandocでKDP提出用データに変換して出版。</div>
-      </div>
-
-      <div class="project">
-        <div class="p-title">Amazonアソシエイト活用</div>
-        <div class="p-desc">note記事内でAmazonアソシエイトリンクを紹介し、収益化の一手段として運用。</div>
-        <div class="p-desc" style="margin-top:4px;">作成方法：Amazonアソシエイト・プログラムに登録し、自身が実際に使用している商品を記事の自然な文脈で紹介する形でリンクを組み込み。</div>
-      </div>
-
-    </div>
-  </section>
-
-  <section>
-    <h2>AI活用の取り組み</h2>
-    <div class="card">
-      <div class="skill-group" style="margin-bottom:16px;">
-        <h3>開発環境</h3>
-        <div class="tags">
-          <span class="tag">Visual Studio Code</span>
-          <span class="tag">Claude（拡張機能）</span>
-          <span class="tag">Python</span>
-        </div>
-      </div>
-      <div class="skill-group" style="margin-bottom:0;">
-        <h3>活用事例</h3>
-        <ul style="margin:0; padding-left:1.2em; font-size:0.92rem;">
-          <li>note記事の自動生成：トレンド情報をもとに無料・有料記事を自動生成し、GitHubに下書きとして保存する仕組みを構築</li>
-          <li>LINEスタンプ制作：Google Geminiを画像生成に活用したキャラクター素材制作</li>
-          <li>Kindle電子書籍の書式・レイアウト作成</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section>
+  <section id="edu">
     <h2>学歴</h2>
     <div class="edu-item"><span class="period">2003年4月〜2004年3月</span>愛知障害者職業能力開発校　CAD科（機械科）卒業</div>
     <div class="edu-item"><span class="period">1996年3月</span>名古屋市立第二工業高等学校　電気科　卒業</div>
+  </section>
+
+  <section id="health">
+    <h2>健康状態・配慮事項</h2>
+    <div class="card">
+      <p style="margin:0 0 10px; font-size:0.94rem;">
+        診断名：下垂体前葉機能低下症、うつ病
+      </p>
+      <ul style="margin:0; padding-left:1.2em; font-size:0.92rem;">
+        <li>服薬管理・体調記録を徹底し、自己管理を行っています</li>
+        <li>疲労が蓄積しやすい特性があるため、時短勤務など体調に配慮した勤務形態を希望します</li>
+        <li>通院・体調管理と両立しながら、無理なく長く続けられる働き方を大切にしています</li>
+      </ul>
+    </div>
   </section>
 
   <footer>
