@@ -4,15 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>小川祐介 ポートフォリオ | PC・CAD・セキュリティシステム経験者</title>
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://oyusuke0603.github.io/portfolio/">
-<meta property="og:title" content="小川祐介 ポートフォリオ | PC・CAD・セキュリティシステム経験者">
-<meta property="og:description" content="小川祐介のポートフォリオサイト。CAD設計・セキュリティ設備図面作成・社内外PC管理の実務経験と、個人開発の実績を紹介します。">
-<meta property="og:image" content="https://oyusuke0603.github.io/portfolio/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://oyusuke0603.github.io/portfolio/og-image.png">
 <meta name="description" content="小川祐介のポートフォリオサイト。CAD設計・セキュリティ設備図面作成・社内外PC管理の実務経験と、個人開発の実績を紹介します。">
 <style>
   :root {
@@ -74,37 +65,6 @@
     margin: 0 0 8px;
     letter-spacing: 0.02em;
     color: var(--text);
-  }
-  header.hero .social-links {
-    margin: 12px 0 16px;
-    display: flex;
-    gap: 12px;
-  }
-  header.hero .social-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--accent);
-    text-decoration: none;
-    transition: all 0.2s ease;
-  }
-  header.hero .social-links a:first-child {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-  }
-  header.hero .social-links a:first-child:hover {
-    background: rgba(255, 255, 255, 0.5);
-    transform: translateY(-2px);
-  }
-  header.hero .social-links a:not(:first-child) {
-    font-size: 0.92rem;
-    font-weight: 500;
-    padding: 0;
-  }
-  header.hero .social-links a:not(:first-child):hover {
-    text-decoration: underline;
   }
   header.hero .role {
     color: var(--accent);
@@ -204,6 +164,35 @@
   .project .p-title { font-weight: 700; font-size: 0.98rem; margin-bottom: 4px; }
   .project .p-title a { color: var(--accent); text-decoration: underline; }
   .project .p-desc { color: var(--text-sub); font-size: 0.9rem; }
+  .p-links { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 8px; }
+  .p-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px 7px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--accent-bg);
+    color: var(--text);
+    font-size: 0.86rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .p-link:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: var(--accent); }
+  .p-link .ico {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 24px; height: 24px;
+    border-radius: 7px;
+    background: var(--accent);
+    color: #fff;
+  }
+  .p-link .ico svg { width: 12px; height: 12px; fill: currentColor; }
+  .p-link.yt .ico { background: #e53935; }
+  .p-link.web .ico { background: var(--accent-2); }
+  .p-link .sub { color: var(--text-sub); font-weight: 600; font-size: 0.78rem; }
 
   footer {
     border-top: 1px solid var(--border);
@@ -230,14 +219,6 @@
 
   <header class="hero">
     <h1>小川 祐介</h1>
-    <div class="social-links">
-      <a href="https://github.com/oyusuke0603" target="_blank" rel="noopener" title="GitHub">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-        </svg>
-      </a>
-      <a href="https://oyusuke0603.github.io/portfolio/" target="_blank" rel="noopener">ポートフォリオサイト（Github）</a>
-    </div>
     <p class="role">CAD設計・セキュリティ設備図面作成・社内外PC管理</p>
     <p class="lead">
       パソコン関連の実務経験20年以上。CADによる図面作成、セキュリティ設備の設計図面管理、
@@ -389,7 +370,9 @@
       <div class="project">
         <div class="p-title"><a href="https://note.com/note_suke/" target="_blank" rel="noopener">note記事執筆</a></div>
         <div class="p-desc">情報発信・体験談記事を継続的に執筆。無料記事・有料記事の両方を運用。</div>
-        <div class="p-desc" style="margin-top:4px; font-weight:700;"><a href="https://note.com/note_suke/m/m496433670d49" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:underline;">マガジン「8歳から50歳、42年の闘病記」</a></div>
+        <div class="p-links">
+          <a class="p-link" href="https://note.com/note_suke/m/m496433670d49" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 12 12"><path d="M2 1h6l2 2v8H2zm1.5 3v1h5V4zm0 2v1h5V6zm0 2v1h3.5V8z"/></svg></span>8歳から50歳、42年の闘病記<span class="sub">マガジン</span></a>
+        </div>
         <div class="p-desc" style="margin-top:4px;">作成方法：Claudeでトレンド情報をもとに記事を自動生成し、GitHubに下書き保存したうえでnote.comへ投稿。</div>
       </div>
 
@@ -401,9 +384,21 @@
 
       <div class="project">
         <div class="p-title"><a href="https://www.youtube.com/@suke0603/playlists" target="_blank" rel="noopener">YouTube動画の制作・公開</a></div>
-        <div class="p-desc">自身の闘病記をもとにした朗読動画を制作・公開。AI生成画像・音声合成・動画生成をPowerShellで一貫して自動化する仕組みを構築。</div>
-        <div class="p-desc" style="margin-top:4px; font-weight:700;"><a href="https://www.youtube.com/watch?v=WVtOaPR7dQI&list=PLaj0RIt8sDfU&pp=0gcJCbwFa94AFGB0sAgC" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:underline;">闘病記 朗読の再生リスト</a></div>
+        <div class="p-desc">自身の闘病記をもとにした朗読動画や、オリジナル紙芝居アニメを制作・公開。AI生成画像・音声合成・動画生成をPowerShellで一貫して自動化する仕組みを構築。</div>
+        <div class="p-links">
+          <a class="p-link yt" href="https://www.youtube.com/playlist?list=PLaj0RIt8sDfU" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 12 12"><path d="M3 1.5v9l7.5-4.5z"/></svg></span>闘病記 朗読<span class="sub">再生リスト</span></a>
+          <a class="p-link yt" href="https://www.youtube.com/playlist?list=PLa23O7c6A60I" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 12 12"><path d="M3 1.5v9l7.5-4.5z"/></svg></span>異世界デバッガー（全話）<span class="sub">再生リスト</span></a>
+        </div>
         <div class="p-desc" style="margin-top:4px;">作成方法：Visual Studio CodeよりClaudeを操作し、ナレーション、画像生成（Google Gemini）、合成を実施。</div>
+      </div>
+
+      <div class="project">
+        <div class="p-title"><a href="https://oyusuke0603.github.io/lp-samples/" target="_blank" rel="noopener">LPサンプルデザイン（GitHub Pages）</a></div>
+        <div class="p-desc">美容サロン・整体院・士業・スクール・飲食店の5業種を想定した、ランディングページのデザインサンプル集を制作・公開。</div>
+        <div class="p-links">
+          <a class="p-link web" href="https://oyusuke0603.github.io/lp-samples/" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 12 12"><path d="M1 2h10v8H1zm1 2v5h8V4z"/></svg></span>LPサンプル集を見る<span class="sub">5業種</span></a>
+        </div>
+        <div class="p-desc" style="margin-top:4px;">作成方法：Claudeで業種ごとのデザインを考案し、写真素材を使わずHTML／CSS／SVGのみで1ページずつ制作。GitHub Pagesで公開。</div>
       </div>
 
       <div class="project">
