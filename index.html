@@ -99,7 +99,13 @@
     transition: border-color .15s ease, color .15s ease;
   }
   .toc a:hover { border-color: var(--accent); color: var(--accent); }
-  .toc a.toc-health { background: var(--accent-2-bg); }
+  .toc a.toc-health {
+    background: linear-gradient(135deg, #f57c00, #e65100);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(230, 81, 0, 0.35);
+  }
+  .toc a.toc-health:hover { color: #fff; border-color: transparent; filter: brightness(1.08); }
 
   section { margin-bottom: 52px; }
   section h2 {
@@ -256,7 +262,7 @@
     <a href="#skills">スキル</a>
     <a href="#career">実務経歴</a>
     <a href="#edu">学歴</a>
-    <a href="#health" class="toc-health">配慮事項</a>
+    <a href="#health" class="toc-health">健康状態・配慮事項</a>
   </nav>
 
   <section id="projects">
