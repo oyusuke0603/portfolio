@@ -23,6 +23,8 @@
     --office-bg: #fff3e0; --office-text: #a15c00;
     --pc-bg: #e6f9ec; --pc-text: #1c7a4a;
     --health: #b8561c;
+    --ai: #6a4fb3;
+    --edu: #56627a;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -42,6 +44,8 @@
       --office-bg: #3a2c17; --office-text: #ffcd82;
       --pc-bg: #143427; --pc-text: #8fe0b3;
       --health: #f0a868;
+      --ai: #b9a4f0;
+      --edu: #a7b2c6;
     }
   }
   * { box-sizing: border-box; }
@@ -101,6 +105,13 @@
     transition: border-color .15s ease, color .15s ease;
   }
   .toc a:hover { border-color: var(--accent); color: var(--accent); }
+  .toc a[href="#projects"] { --c: var(--accent); }
+  .toc a[href="#ai"]       { --c: var(--ai); }
+  .toc a[href="#skills"]   { --c: var(--cad-text); }
+  .toc a[href="#career"]   { --c: var(--pc-text); }
+  .toc a[href="#edu"]      { --c: var(--edu); }
+  .toc a[href]:not(.toc-health) { border: 1.5px solid var(--c); color: var(--c); }
+  .toc a[href]:not(.toc-health):hover { border-color: var(--c); color: var(--c); background: var(--accent-bg); }
   .toc a.toc-health {
     background: var(--accent-2-bg);
     border: 2px solid var(--health);
